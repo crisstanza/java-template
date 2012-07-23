@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="JavaTemplate" basedir="." default="make">
+
+	<target name="clean">
+		<delete dir="classes" />
+	</target>
+
+	<target name="make" depends="clean">
+		<mkdir dir="classes" />
+		<javac srcdir="src" destdir="classes" />
+	</target>
+
+	<target name="run" depends="make">
+		<java classpath="classes" classname="main.Main" fork="true">
+			<arg value="." />
+		</java>
+	</target>
+
+</project>
