@@ -16,7 +16,7 @@ public final class Main {
 	private Main() {
 	}
 
-	private final void init(final String projectPath) {
+	private final void init(final String arg) {
 		final MainModel mainModel = new MainModel();
 		mainModel.init();
 		//
